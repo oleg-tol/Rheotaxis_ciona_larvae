@@ -11,7 +11,7 @@ import pandas as pd
 # Import modules
 from data_loading import load_data
 from pca_analysis import perform_pca_on_entire_dataset
-from custom_analysis import prepare_custom_datasets, print_cell_type_counts, generate_and_save_summary_data
+from brain_analysis import prepare_custom_datasets, print_cell_type_counts, generate_and_save_summary_data
 
 # Define directories and parameters
 directory = "path"
