@@ -1,14 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-Created on Mon Mar 24 14:28:28 2025
-
-@author: oleg
-"""
-
-"""
-behavior_metrics.py
-
 Module for calculating various experimental metrics.
 Includes functions for:
   - Synchronizing NaNs between paired dataframes
