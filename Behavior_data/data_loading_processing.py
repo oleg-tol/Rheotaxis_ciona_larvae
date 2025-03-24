@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Mar 24 10:53:29 2025
-
-@author: oleg
-"""
-
 """
 Module for loading, processing, and filtering (based on body size of the animal) DLC output filtered CSV data files.
 """
