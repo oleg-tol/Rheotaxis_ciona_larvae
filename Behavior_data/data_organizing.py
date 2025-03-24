@@ -1,13 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-Created on Mon Mar 24 12:44:01 2025
-
-@author: oleg
-"""
-"""
-data_preprocessing.py
-
 Module for organizing, validating, and merging processed CSV files from stimulus folders.
 """
 
