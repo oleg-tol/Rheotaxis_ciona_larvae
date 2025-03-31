@@ -1,4 +1,4 @@
-# Rhethaxis setup 3D part
+# Rhethaxis setup
 
 This repository contains a zipfolder with the molds for 3D printing parts of the setup
 
