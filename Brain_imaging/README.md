@@ -18,7 +18,7 @@ This repository contains a modular pipeline for calcium imaging data analysis. T
   Functions for custom analyses including phase splitting, cell grouping, and summary score computation.
 
 - **main.py:**
-  The main script that orchestrates the entire analysis pipeline.
+  The main script that start the analysis pipeline.
 
 ## Requirements
 
