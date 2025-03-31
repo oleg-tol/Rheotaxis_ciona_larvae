@@ -1,11 +1,11 @@
-# Deep Lab Cut Experimental Data Processing
+# Deep Lab Cut experimental data processing
 
-This repository contains two modules for processing experimental data, one module for behavior metric calculation.
+This repository contains two modules for processing experimental data, and one module for behavior metrics calculation.
 
 ## Modules
 
 - **data_loading_processing.py**
-  Loads and processes raw CSV files by cleaning, sampling, and filtering based on calculated metrics.
+  Loads and processes raw CSV files by cleaning, sampling, and filtering based on known animal size.
 
 - **data_organizing.py**
   Organizes and merges processed CSV files from different stimulus folders, applies additional filtering (edge cutting), and reorders metadata columns.
@@ -28,7 +28,7 @@ This module (behavior_metrics.py) contains a collection of functions to compute 
 metrics used in our experimental analyses. The functions include:
 
 - synchronize_nans: Synchronize NaNs between paired dataframes.
-- calculate_center_of_mass.
+- calculate_center_of_mass : Calculate the center of mass from the body parts coordinates.
 - filter_continuous_fragments: Filter data to keep only continuous fragments with at least a minimum length.
 - calculate_heading_velocity: Compute heading velocity from x and y coordinates.
 - apply_pixel_size: Convert numerical data using a pixel size factor.
