@@ -8,16 +8,6 @@ from sklearn.decomposition import PCA
 from tslearn.preprocessing import TimeSeriesScalerMeanVariance
 
 def get_PCA_results(df_zscored, n_components=3):
-    """
-    Perform PCA on z-scored data and return PCA results and loadings.
-    
-    Parameters:
-        df_zscored (pd.DataFrame): Z-scored data.
-        n_components (int): Number of PCA components.
-        
-    Returns:
-        Tuple: (PCA transformed data, PCA loadings DataFrame, explained variance ratio)
-    """
     try:
         zscored = df_zscored.values
         n_components = min(zscored.shape[0], zscored.shape[1], n_components)
@@ -40,16 +30,6 @@ def get_PCA_results(df_zscored, n_components=3):
         return None, None, None
 
 def perform_pca_on_entire_dataset(merged_df, n_components=3):
-    """
-    Perform PCA on the entire dataset (without phase separation) and save eigenvectors.
-    
-    Parameters:
-        merged_df (pd.DataFrame): The entire dataset.
-        n_components (int): Number of principal components.
-        
-    Returns:
-        Tuple: (PCA object, explained variance ratio)
-    """
     try:
         # Assume data columns are from 1 to -2 (exclude metadata)
         data_columns = merged_df.columns[1:-2]
