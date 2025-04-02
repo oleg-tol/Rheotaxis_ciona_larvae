@@ -17,7 +17,7 @@ def load_data(directory, pattern="*.csv", verbose=True):
     for file in files:
         try:
             filename = os.path.basename(file)
-            experiment = filename[:-4]  # Remove '.csv'
+            experiment = filename[:-4]  
             stimuli_part = re.search(r'Gcamp6-(\d+)', filename)
             stimuli_strength = stimuli_part.group(1) if stimuli_part else 'Unknown'
 
