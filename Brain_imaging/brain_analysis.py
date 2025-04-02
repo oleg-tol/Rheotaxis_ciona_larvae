@@ -4,8 +4,7 @@ Brain analysis functions:
   - Preparing custom dataset subsets
   - Grouping cells by brain region and computing summary scores
   - Analyzing datasets by phase
-  - Other helper functions
-"""
+ """
 
 import os
 import numpy as np
@@ -65,7 +64,7 @@ def generate_and_save_summary_data(subsets, output_dir, exposure_time):
         phase_data = split_data_by_phases(subset_df, exposure_time)
         for phase, phase_df in phase_data.items():
             df_zscored = zscore_rawcurves(phase_df)
-            # Call your PCA functions (assume they are imported from pca_analysis)
+           
             from pca_analysis import get_PCA_results
             results_pca, df_loadings, explained_variance = get_PCA_results(df_zscored, n_components=5)
             if results_pca is None or df_loadings is None:
