@@ -44,7 +44,6 @@ def plot_pca_traj3d(results_pca, sample_id, savepath, aten_max_times=[], palp_ma
         
         for i in range(1, N):
             ax.plot(T[i-1:i+1, 2], T[i-1:i+1, 0], T[i-1:i+1, 1], color=cmap(norm(i)))
-            # Example annotations for specific time indices
             if i == int(61 / exposure_time):
                 ax.scatter(T[i, 2], T[i, 0], T[i, 1], color='green', s=50, marker='o', label='Start Stimuli')
             elif i == int((61 + 30) / exposure_time):
