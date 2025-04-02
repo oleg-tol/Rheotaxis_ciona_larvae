@@ -1,6 +1,5 @@
 """
-Functions for generating visualizations such as clustermaps, PCA loadings clustermaps,
-3D PCA trajectory plots, and bubble plots.
+Functions for generating visualizations.
 """
 
 import os
