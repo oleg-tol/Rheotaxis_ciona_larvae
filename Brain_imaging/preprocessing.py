@@ -8,16 +8,7 @@ import pandas as pd
 from tslearn.preprocessing import TimeSeriesScalerMeanVariance
 
 def zscore_rawcurves(sample_df):
-    """
-    Z-score normalize the raw curves in the DataFrame.
-    
-    Parameters:
-        sample_df (pd.DataFrame): Input DataFrame with raw data.
-        
-    Returns:
-        pd.DataFrame: Z-scored data with the 'cell' column retained.
-    """
-    try:
+   try:
         # Exclude metadata columns; assume first 3 columns are metadata: 'cell', 'Experiment', 'Stimuli_Strength'
         temporal = sample_df.iloc[:, 3:].values.astype(float)
         zscored = TimeSeriesScalerMeanVariance().fit_transform(temporal)[..., 0]
