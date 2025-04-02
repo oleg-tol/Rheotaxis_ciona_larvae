@@ -31,7 +31,6 @@ def get_PCA_results(df_zscored, n_components=3):
 
 def perform_pca_on_entire_dataset(merged_df, n_components=3):
     try:
-        # Assume data columns are from 1 to -2 (exclude metadata)
         data_columns = merged_df.columns[1:-2]
         entire_data = merged_df[data_columns].values
         zscored_data = TimeSeriesScalerMeanVariance().fit_transform(entire_data)[..., 0]
