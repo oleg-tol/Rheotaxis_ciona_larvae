@@ -10,10 +10,7 @@ import numpy as np
 from matplotlib import cm
 
 def generate_zscore_clustermaps(df_zscored, sample_id, savepath):
-    """
-    Generate and save a clustermap of z-scored data.
-    """
-    try:
+   try:
         scale_cg1 = (len(df_zscored.columns)) / 2
         fig = sns.clustermap(data=df_zscored.T, col_cluster=False, figsize=(15, scale_cg1))
         save_dir = os.path.join(savepath, 'clustermaps')
@@ -23,10 +20,7 @@ def generate_zscore_clustermaps(df_zscored, sample_id, savepath):
         print(f"Error generating clustermap: {e}")
 
 def generate_pca_loadings_clustermap(df_loadings, sample_id, savepath):
-    """
-    Generate and save a clustermap of PCA loadings.
-    """
-    try:
+   try:
         scale_cg1 = (len(df_loadings.columns)) / 2
         fig = sns.clustermap(df_loadings.T, cmap="PiYG", col_cluster=False, figsize=(3, scale_cg1))
         save_dir = os.path.join(savepath, 'loadings_clustermaps')
@@ -36,9 +30,6 @@ def generate_pca_loadings_clustermap(df_loadings, sample_id, savepath):
         print(f"Error generating PCA loadings clustermap: {e}")
 
 def plot_pca_traj3d(results_pca, sample_id, savepath, aten_max_times=[], palp_max_times=[], exposure_time=0.673474):
-    """
-    Plot a 3D trajectory of PCA results with annotations.
-    """
     if results_pca is None or results_pca.shape[1] < 3:
         print(f"Skipping 3D plot for {sample_id} due to insufficient PCA components.")
         return
@@ -77,7 +68,6 @@ def plot_pca_traj3d(results_pca, sample_id, savepath, aten_max_times=[], palp_ma
         ax.set_zlim(T[:, 1].min()-2, T[:, 1].max()+2)
         ax.view_init(elev=30., azim=40.)
         
-        # Save and show
         save_dir = os.path.join(savepath, 'pca3dplots_with_stims')
         os.makedirs(save_dir, exist_ok=True)
         fig.savefig(os.path.join(save_dir, f'plot3d_{sample_id}.svg'))
