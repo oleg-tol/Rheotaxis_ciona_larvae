@@ -9,17 +9,6 @@ from glob import glob
 from datetime import date
 
 def load_data(directory, pattern="*.csv", verbose=True):
-    """
-    Load and merge CSV files from the specified directory.
-    
-    Parameters:
-        directory (str): Path to the directory containing CSV files.
-        pattern (str): Pattern to match CSV files (default is '*.csv').
-        verbose (bool): If True, print progress messages.
-
-    Returns:
-        pd.DataFrame: Merged DataFrame containing data from all CSV files.
-    """
     files = glob(os.path.join(directory, pattern))
     if verbose:
         print(f"Found {len(files)} files in {directory}.")
