@@ -79,8 +79,8 @@ def process_all(parent_dir):
     return merged_X_b, merged_Y_b, merged_X_p, merged_Y_p
 
 def main():
-    parent_dir = '/media/oleg/oleg/ChH_new/Processed_Results'
-    output_dir = '/media/oleg/oleg/ChH_new/Processed_Results/2025-03-24/Results'
+    parent_dir = ''
+    output_dir = ''
     os.makedirs(output_dir, exist_ok=True)
     df_X_b, df_Y_b, df_X_p, df_Y_p = process_all(parent_dir)
     df_X_b.to_csv(os.path.join(output_dir, 'filtered_df_X_b.csv'), index=False)
