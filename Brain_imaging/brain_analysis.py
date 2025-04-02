@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 from datetime import date
-from preprocessing import zscore_rawcurves  # Import from preprocessing if needed
+from preprocessing import zscore_rawcurves  
 
 def group_cells_to_brain_regions(cell_type):
     group_mapping = {
@@ -47,7 +47,7 @@ def split_data_by_phases(df, exposure_time):
     phase_data = {}
     for phase, (start, end) in phases.items():
         indices = [i + 1 for i, t in enumerate(timepoints) if start <= t < end]
-        phase_data[phase] = df.iloc[:, [0] + indices]  # Assume first column is 'cell'
+        phase_data[phase] = df.iloc[:, [0] + indices] 
     return phase_data
 
 def calculate_weighted_summary(df_loadings, explained_variance, use_abs=True):
