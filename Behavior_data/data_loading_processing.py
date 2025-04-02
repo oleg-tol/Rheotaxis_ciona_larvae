@@ -92,5 +92,5 @@ def process_experiment_folder(experiment_folder: str):
         print("\nAll files processed successfully!")
 
 if __name__ == '__main__':
-    experiment_folder = '/media/oleg/oleg/ChH_new'
+    experiment_folder = ''
     process_experiment_folder(experiment_folder)
