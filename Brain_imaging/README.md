@@ -20,6 +20,9 @@ This repository contains a modular pipeline for calcium imaging data analysis. T
 - **main.py:**
   The main script that start the analysis pipeline.
 
+ - **cell_responsiveness.py:**
+  Functions to perform responsivness analysis on baseline corrected data. 
+
 ## Requirements
 
 - Python 3.x
